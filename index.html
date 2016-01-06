@@ -31,8 +31,8 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a id="manuscript" class="anchor" href="#manuscript" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manuscript</h3>
+        <h2>
+<a id="manuscript" class="anchor" href="#manuscript" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manuscript</h2>
 
 <p>"Functional Genomic Landscape  of Human Breast Cancer Drivers,  Vulnerabilities, and Resistance"</p>
 
@@ -44,42 +44,70 @@
 
 <p>[LINK] [PDF]</p>
 
-<h3>
-<a id="links-to-data-on-geo" class="anchor" href="#links-to-data-on-geo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Links to Data on GEO</h3>
+<h2>
+<a id="links-to-data-on-geo" class="anchor" href="#links-to-data-on-geo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Links to Data on GEO</h2>
 
 <p>shRNA screens (<a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE74702%5D">GSE74702</a>)</p>
 
 <p>RNAseq (<a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE73526">GSE73526</a>)</p>
 
+<h2>
+<a id="functional-genomics-and-proteomics-data-files" class="anchor" href="#functional-genomics-and-proteomics-data-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functional, Genomics and Proteomics Data Files</h2>
+
 <h3>
-<a id="genomics-and-proteomics-data-files" class="anchor" href="#genomics-and-proteomics-data-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>Genomics and Proteomics Data Files</h3>
+<a id="shrna-screens" class="anchor" href="#shrna-screens" aria-hidden="true"><span class="octicon octicon-link"></span></a>shRNA screens</h3>
+
+<ul>
+<li>
+<p><a href="http://shrna">ExpressionSet</a>: RData format file containing a Bioconductor ExpressionSet object combining</p>
+
+<ul>
+<li>Per-sample (cell line + time-point + replicate), per-hairpin log2 measurements matrix, accessed using the <code>exprs()</code> R function.</li>
+<li>Per-hairpin, per-gene annotations data frame, with the same number of rows as the measurement matrix.</li>
+<li>Per sample annotation data frame, including information such as cell line and time-point. This number of rows in this data frame matches the number of columns in the measurements matrix.</li>
+</ul>
+</li>
+<li><p><a href="https://github.com/neellab/bfg/blob/gh-pages/data/rnaseq/breast_rnaseq_qn.txt.zip?raw=true">per-gene normalized log2 FPKM</a>: As above, but also Quantile-Normalized, and a floor value set at log2(0.1) FPKM . This version was used in the manuscript analyses.</p></li>
+</ul>
+
+<h3>
+<a id="rnaseq" class="anchor" href="#rnaseq" aria-hidden="true"><span class="octicon octicon-link"></span></a>RNASeq</h3>
 
 <p>RNAseq Per-Gene log2-FPKM</p>
 
 <ul>
 <li><a href="http://RNASEQ">per-gene log2 FPKM</a></li>
 <li>
-<a href="https://github.com/neellab/bfg/blob/gh-pages/data/rnaseq/breast_rnaseq_qn.txt.zip?raw=true">per-gene normalized log2 FPKM</a>: As above, but also Quantile-Normalized, and a floor value set at log2(0.1) FPKM (or -3.332 log2-FPKM). This version was used in the manuscript analyses.</li>
+<a href="https://github.com/neellab/bfg/blob/gh-pages/data/rnaseq/breast_rnaseq_qn.txt.zip?raw=true">per-gene normalized log2 FPKM</a>: As above, but also Quantile-Normalized, and a floor value set at log2(0.1) FPKM . This version was used in the manuscript analyses.</li>
 </ul>
 
-<p>CNA Per-Gene Log-R Ratios [LINK]</p>
+<h3>
+<a id="cna" class="anchor" href="#cna" aria-hidden="true"><span class="octicon octicon-link"></span></a>CNA</h3>
+
+<p><a href="">CNA Per-Gene Log-R Ratios</a></p>
+
+<h3>
+<a id="mirna" class="anchor" href="#mirna" aria-hidden="true"><span class="octicon octicon-link"></span></a>miRNA</h3>
 
 <p>miRNA [PROCESSED] [BATCH1] [BATCH2] [BATCH3]</p>
 
-<p>RPPA [LINK]</p>
-
 <h3>
-<a id="annotation-files" class="anchor" href="#annotation-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>Annotation Files</h3>
+<a id="rppa" class="anchor" href="#rppa" aria-hidden="true"><span class="octicon octicon-link"></span></a>RPPA</h3>
 
-<p><a href="https://github.com/neellab/bfg/blob/gh-pages/data/annotations/cell_line_subtypes.txt.zip?raw=true">Cell line subtypes</a>: sub-typing of each cell line according to:</p>
+<p><a href="https://github.com/neellab/bfg/blob/gh-pages/data/rppa/cell_line_rppa.xlsx?raw=true">RPPA</a></p>
+
+<h2>
+<a id="annotation-files" class="anchor" href="#annotation-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>Annotation Files</h2>
+
+<p><a href="https://github.com/neellab/bfg/blob/gh-pages/data/annotations/cell_line_subtypes.txt.zip?raw=true">Cell line subtypes</a>: sub-typing of each cell line according to</p>
 
 <ul>
 <li>receptor expression and status (AR, ERBB2, ESR1, PGR)</li>
 <li>three-receptor classification (ER/ERBB2/TNBC)</li>
 <li>Curtis Integrative Subtypes (IntClust 1 through 10)</li>
-<li>Intrinsic classification (Luminal A, Luminal B, Her2, Basal, Normal-like) with Claudin Low status added.</li>
+<li>Intrinsic classification (Luminal A, Luminal B, Her2, Basal, Normal-like) with Claudin Low status.</li>
 <li>Lehmann TNBC subtypes (Basal Like 1, Basal Like 2, Immunomodulatory, Luminal Androgen Receptor, Mesenchymal, Mesenchymal Stem-Like)</li>
-<li>Neve classification (luminal, basal A, basal B) with her2 added based on expression status.</li>
+<li>Neve classification (luminal, basal A, basal B) with luminal cell lines further classified as her2 added based on high ERBB2 expression status.</li>
 <li>Unsupervised clustering of RNASeq, RPPA and shRNA screen data.</li>
 </ul>
 
