@@ -58,25 +58,24 @@
 
 <ul>
 <li>
-<p><a href="http://shrna">ExpressionSet</a>: RData format file containing a Bioconductor ExpressionSet object combining</p>
+<p><a href="http://shrna">Normalized ExpressionSet</a>: RData format file containing a Bioconductor ExpressionSet object combining</p>
 
 <ul>
-<li>Per-sample (cell line + time-point + replicate), per-hairpin log2 measurements matrix, accessed using the <code>exprs()</code> R function.</li>
-<li>Per-hairpin, per-gene annotations data frame, with the same number of rows as the measurement matrix.</li>
-<li>Per sample annotation data frame, including information such as cell line and time-point. This number of rows in this data frame matches the number of columns in the measurements matrix.</li>
+<li>Loaded into R using the <code>load()</code> function.</li>
+<li>Per-sample (cell line + time-point + replicate), per-hairpin log2 measurements matrix. Accessed using the <code>exprs()</code> R function.</li>
+<li>Per-hairpin, per-gene annotations data frame, with the same number of rows as the measurement matrix. Accessed using the <code>fData()</code> R function.</li>
+<li>Per sample annotation data frame, including information such as cell line and time-point. This number of rows in this data frame matches the number of columns in the measurements matrix. Accessed using the <code>pData()</code> R function.</li>
 </ul>
 </li>
-<li><p><a href="https://github.com/neellab/bfg/blob/gh-pages/data/rnaseq/breast_rnaseq_qn.txt.zip?raw=true">per-gene normalized log2 FPKM</a>: As above, but also Quantile-Normalized, and a floor value set at log2(0.1) FPKM . This version was used in the manuscript analyses.</p></li>
+<li><p><a href="https://github.com/neellab/bfg/blob/gh-pages/data/rnaseq/breast_rnaseq_qn.txt.zip?raw=true">Per-gene normalized log2 FPKM</a>: As above, but also Quantile-Normalized, and a floor value set at log2(0.1) FPKM . This version was used in the manuscript analyses.</p></li>
 </ul>
 
 <p><strong>RNASeq</strong></p>
 
-<p>RNAseq Per-Gene log2-FPKM</p>
-
 <ul>
-<li><a href="http://RNASEQ">per-gene log2 FPKM</a></li>
+<li><a href="http://RNASEQ">Per-gene log2 FPKM</a></li>
 <li>
-<a href="https://github.com/neellab/bfg/blob/gh-pages/data/rnaseq/breast_rnaseq_qn.txt.zip?raw=true">per-gene normalized log2 FPKM</a>: As above, but also Quantile-Normalized, and a floor value set at log2(0.1) FPKM . This version was used in the manuscript analyses.</li>
+<a href="https://github.com/neellab/bfg/blob/gh-pages/data/rnaseq/breast_rnaseq_qn.txt.zip?raw=true">Per-gene normalized log2 FPKM</a>: As above, but also Quantile-Normalized, and a floor value set at log2(0.1) FPKM . This version was used in the manuscript analyses.</li>
 </ul>
 
 <p><strong>CNA</strong></p>
