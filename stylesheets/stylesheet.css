@@ -315,6 +315,42 @@ Full-Width Styles
   text-shadow: #111 0px 0px 10px;
 }
 
+
+#downloads {
+  position: absolute;
+  width: 0px;
+  z-index: 10;
+  bottom: -40px;
+  right: 0;
+  height: 0px;
+}
+
+.zip_download_link {
+  display: block;
+  float: right;
+  width: 0px;
+  height:0px;
+  text-indent: -5000px;
+  overflow: hidden;
+}
+
+.tar_download_link {
+  display: block;
+  float: right;
+  width: 0px;
+  height:0px;
+  text-indent: -5000px;
+  overflow: hidden;
+  margin-left: 0px;
+}
+
+.zip_download_link:hover {
+}
+
+.tar_download_link:hover {
+}
+
+/*
 #downloads {
   position: absolute;
   width: 210px;
@@ -353,6 +389,10 @@ Full-Width Styles
 .tar_download_link:hover {
   background: url(../images/sprite_download.png) no-repeat top right;
 }
+*/
+
+
+
 
 #main_content_wrap {
   background: #f2f2f2;
